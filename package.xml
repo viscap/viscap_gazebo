@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<package>
+  <name>viscap_gazebo</name>
+  <version>0.1.0</version>
+  <description>This package holds files that define many simulation scenarios on Gazebo to be used by the Viscap group.</description>
+
+  <maintainer email="faerugb@gmail.com">Rafael Gomes Braga</maintainer>
+
+  <license>Apache 2.0</license>
+
+  <author >Rafael Gomes Braga</author>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <build_depend>imav_2017</build_depend>
+
+  <run_depend>imav_2017</run_depend>
+
+</package>

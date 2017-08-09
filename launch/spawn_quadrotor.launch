@@ -1,0 +1,32 @@
+<launch>
+
+    <arg name="model" default="$(find imav_2017)/urdf/quadrotor.urdf.xacro"/>
+    <arg name="x" default="0"/>
+    <arg name="y" default="0"/>
+    <arg name="z" default="1"/>
+    <arg name="R" default="0"/>
+    <arg name="P" default="0"/>
+    <arg name="Y" default="0"/>
+    <arg name="id" default="1"/>
+    <!-- send the robot XML to param server -->
+    <param name="robot_description" command="$(find xacro)/xacro --inorder '$(arg model)' id:=$(arg id)" />
+
+    <!-- push robot_description to factory and spawn robot in gazebo -->
+    <node name="spawn_robot" pkg="gazebo_ros" type="spawn_model"
+        args="-param robot_description
+        -urdf
+        -x '$(arg x)'
+        -y '$(arg y)'
+        -z '$(arg z)'
+        -R '$(arg R)'
+        -P '$(arg P)'
+        -Y '$(arg Y)'
+        -model quadrotor_$(arg id)"
+        respawn="false" output="screen"/>
+
+    <!-- state estimator -->
+    <node ns="hector" name="hector_pose_estimation" pkg="hector_pose_estimation" type="pose_estimation" output="screen"/>
+
+    <!--node name="relay" pkg="topic_tools" type="relay" params="/quadrotor_1/fix /hector/fix" /-->
+
+</launch>
