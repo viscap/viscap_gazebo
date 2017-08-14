@@ -1,0 +1,66 @@
+<launch>
+
+    <arg name="origin_lat" default="49.9" />
+    <arg name="origin_lon" default="8.9" />
+
+    <param name="/uav_swarm_control/origin_lat" value="$(arg origin_lat)" />
+    <param name="/uav_swarm_control/origin_lon" value="$(arg origin_lon)" />
+    <param name="/uav_swarm_control/fix_topic" value="fix"/>
+    <param name="/uav_swarm_control/odom_topic" value="ground_truth/state"/>
+    <param name="/uav_swarm_control/cmd_vel_topic" value="cmd_vel"/>
+
+    <!-- start gazebo -->
+    <include file="$(find gazebo_ros)/launch/empty_world.launch"/>
+
+    <!-- spawn the quadrotors -->
+    <include file="$(find viscap_gazebo)/launch/spawn_quadrotor.launch">
+        <arg name="id" value="1"/>
+        <arg name="x" value="0.0"/>
+        <arg name="y" value="-20.0"/>
+        <arg name="z" value="2.0"/>
+    </include>
+    <include file="$(find viscap_gazebo)/launch/spawn_quadrotor.launch">
+        <arg name="id" value="2"/>
+        <arg name="x" value="0.0"/>
+        <arg name="y" value="0.0"/>
+        <arg name="z" value="2.0"/>
+    </include>
+    <include file="$(find viscap_gazebo)/launch/spawn_quadrotor.launch">
+        <arg name="id" value="3"/>
+        <arg name="x" value="0.0"/>
+        <arg name="y" value="5.0"/>
+        <arg name="z" value="2.0"/>
+    </include>
+
+
+    <group ns="quadrotor_1">
+        <param name="uav_id" value="1"/>
+        <param name="tf_frame" value="uav1"/>
+
+        <node pkg="uav_swarm_control" type="swarm_controller_node" name="swarm_controller_node" output="screen" />
+
+        <node pkg="uav_swarm_control" type="marker_publisher" name="marker_publisher" />
+
+    </group>
+
+    <group ns="quadrotor_2">
+        <param name="uav_id" value="2" />
+        <param name="tf_frame" value="uav2"/>
+
+        <node pkg="uav_swarm_control" type="swarm_controller_node" name="swarm_controller_node" output="screen" />
+
+        <node pkg="uav_swarm_control" type="marker_publisher" name="marker_publisher" />
+    </group>
+
+    <group ns="quadrotor_3">
+        <param name="uav_id" value="3" />
+        <param name="tf_frame" value="uav3"/>
+
+        <node pkg="uav_swarm_control" type="swarm_controller_node" name="swarm_controller_node" output="screen" />
+
+        <node pkg="uav_swarm_control" type="marker_publisher" name="marker_publisher" />
+    </group>
+
+
+
+</launch>

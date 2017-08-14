@@ -1,0 +1,27 @@
+<?xml version="1.0" ?>
+<sdf version="1.5">
+  <world name="default">
+
+    <!-- Place user camera -->
+    <gui>
+        <camera name="user_camera">
+            <pose>-4.894847 8.114561 4.637910 0.000000 0.307999 -0.659998</pose>
+        </camera>
+    </gui>
+
+    <!-- A global light source -->
+    <include>
+      <uri>model://sun</uri>
+    </include>
+    <!-- A ground plane -->
+    <include>
+      <uri>model://ground_plane</uri>
+    </include>
+
+    <!-- The IMAV 2016 indoor building -->
+    <include>
+        <uri>model://imav2016_indoor</uri>
+        <pose>16.5 0 0 0 0 3.14</pose>
+    </include>
+  </world>
+</sdf>

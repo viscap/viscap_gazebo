@@ -9,11 +9,11 @@
     <arg name="Y" default="0"/>
     <arg name="id" default="1"/>
     <!-- send the robot XML to param server -->
-    <param name="robot_description" command="$(find xacro)/xacro --inorder '$(arg model)' id:=$(arg id)" />
+    <param name="robot_description_$(arg id)" command="$(find xacro)/xacro --inorder '$(arg model)' id:=$(arg id)" />
 
     <!-- push robot_description to factory and spawn robot in gazebo -->
-    <node name="spawn_robot" pkg="gazebo_ros" type="spawn_model"
-        args="-param robot_description
+    <node name="spawn_robot_$(arg id)" pkg="gazebo_ros" type="spawn_model"
+        args="-param robot_description_$(arg id)
         -urdf
         -x '$(arg x)'
         -y '$(arg y)'
@@ -25,8 +25,16 @@
         respawn="false" output="screen"/>
 
     <!-- state estimator -->
-    <node ns="hector" name="hector_pose_estimation" pkg="hector_pose_estimation" type="pose_estimation" output="screen"/>
+    <!--node ns="hector" name="hector_pose_estimation" pkg="hector_pose_estimation" type="pose_estimation" output="screen"/>
 
-    <!--node name="relay" pkg="topic_tools" type="relay" params="/quadrotor_1/fix /hector/fix" /-->
+    <node name="relay1" pkg="topic_tools" type="relay" args="/quadrotor_1/fix /hector/fix" />
+    <node name="relay2" pkg="topic_tools" type="relay" args="/quadrotor_1/imu /hector/raw_imu" />
+    <node name="relay3" pkg="topic_tools" type="relay" args="/quadrotor_1/magnetic /hector/magnetic" />
+    <node name="relay4" pkg="topic_tools" type="relay" args="/quadrotor_1/fix_velocity /hector/fix_velocity" /-->
+
+    <!--node name="ground_truth_to_tf_$(arg id)" pkg="message_to_tf" type="message_to_tf" output="screen">
+        <param name="odometry_topic" value="/quadrotor_$(arg id)/ground_truth/state" />
+        <param name="frame_id" value="nav" />
+    </node-->
 
 </launch>
