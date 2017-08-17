@@ -25,16 +25,16 @@
         respawn="false" output="screen"/>
 
     <!-- state estimator -->
-    <!--node ns="hector" name="hector_pose_estimation" pkg="hector_pose_estimation" type="pose_estimation" output="screen"/>
+    <node ns="quadrotor_$(arg id)" name="hector_pose_estimation_$(arg id)" pkg="hector_pose_estimation" type="pose_estimation" output="screen"/>
 
-    <node name="relay1" pkg="topic_tools" type="relay" args="/quadrotor_1/fix /hector/fix" />
-    <node name="relay2" pkg="topic_tools" type="relay" args="/quadrotor_1/imu /hector/raw_imu" />
-    <node name="relay3" pkg="topic_tools" type="relay" args="/quadrotor_1/magnetic /hector/magnetic" />
-    <node name="relay4" pkg="topic_tools" type="relay" args="/quadrotor_1/fix_velocity /hector/fix_velocity" /-->
-
-    <!--node name="ground_truth_to_tf_$(arg id)" pkg="message_to_tf" type="message_to_tf" output="screen">
-        <param name="odometry_topic" value="/quadrotor_$(arg id)/ground_truth/state" />
-        <param name="frame_id" value="nav" />
-    </node-->
+    <!-- publish base frame to tf -->
+    <node ns="quadrotor_$(arg id)" name="ground_truth_to_tf_$(arg id)" pkg="message_to_tf" type="message_to_tf" output="screen">
+        <param name="odometry_topic" value="/quadrotor_$(arg id)/state" />
+        <param name="frame_id" value="map" />
+        <param name="footprint_frame_id" value="base_footprint_$(arg id)" />
+        <param name="position_frame_id" value="base_position_$(arg id)" />
+        <param name="stabilized_frame_id" value="base_stabilized_$(arg id)" />
+        <param name="child_frame_id" value="base_link_$(arg id)" />
+    </node>
 
 </launch>
