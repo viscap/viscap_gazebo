@@ -10,4 +10,15 @@
         <arg name="id" value="1"/>
     </include>
 
+    <!-- slam node -->
+    <!--node ns="quadrotor_1" name="hector_mapping" pkg="hector_mapping" type="hector_mapping" output="screen"></node-->
+    <include file="$(find hector_mapping)/launch/mapping_default.launch">
+        <arg name="base_frame" value="base_footprint_1"/>
+        <arg name="odom_frame" value="base_link_1"/>
+        <arg name="scan_topic" value="/quadrotor_1/scan"/>
+    </include>
+
+    <!-- Run RVIZ-->
+    <node name="$(anon rviz)" pkg="rviz" type="rviz" args="-d $(find viscap_gazebo)/rviz_config/slam.rviz" />
+
 </launch>

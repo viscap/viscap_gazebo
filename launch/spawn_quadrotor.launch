@@ -29,12 +29,20 @@
 
     <!-- publish base frame to tf -->
     <node ns="quadrotor_$(arg id)" name="ground_truth_to_tf_$(arg id)" pkg="message_to_tf" type="message_to_tf" output="screen">
-        <param name="odometry_topic" value="/quadrotor_$(arg id)/state" />
+        <param name="odometry_topic" value="/quadrotor_$(arg id)/ground_truth/state" />
+        <param name="frame_id" value="map" />
+        <param name="footprint_frame_id" value="base_footprint" />
+        <param name="position_frame_id" value="base_position" />
+        <param name="stabilized_frame_id" value="base_stabilized" />
+        <param name="child_frame_id" value="base_link" />
+    </node>
+    <!--node ns="quadrotor_$(arg id)" name="ground_truth_to_tf_$(arg id)" pkg="message_to_tf" type="message_to_tf" output="screen">
+        <param name="odometry_topic" value="/quadrotor_$(arg id)/ground_truth/state" />
         <param name="frame_id" value="map" />
         <param name="footprint_frame_id" value="base_footprint_$(arg id)" />
         <param name="position_frame_id" value="base_position_$(arg id)" />
         <param name="stabilized_frame_id" value="base_stabilized_$(arg id)" />
         <param name="child_frame_id" value="base_link_$(arg id)" />
-    </node>
+    </node-->
 
 </launch>
