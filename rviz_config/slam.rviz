@@ -6,7 +6,6 @@ Panels:
       Expanded:
         - /Global Options1
         - /Status1
-        - /Odometry1
         - /TF1/Frames1
       Splitter Ratio: 0.5
     Tree Height: 337
@@ -49,40 +48,6 @@ Visualization Manager:
       Plane: XY
       Plane Cell Count: 10
       Reference Frame: <Fixed Frame>
-      Value: true
-    - Angle Tolerance: 0.10000000149011612
-      Class: rviz/Odometry
-      Covariance:
-        Orientation:
-          Alpha: 0.5
-          Color: 255; 255; 127
-          Color Style: Unique
-          Frame: Local
-          Offset: 1
-          Scale: 1
-          Value: true
-        Position:
-          Alpha: 0.30000001192092896
-          Color: 204; 51; 204
-          Scale: 1
-          Value: true
-        Value: true
-      Enabled: true
-      Keep: 1
-      Name: Odometry
-      Position Tolerance: 0.10000000149011612
-      Shape:
-        Alpha: 1
-        Axes Length: 1
-        Axes Radius: 0.10000000149011612
-        Color: 255; 25; 0
-        Head Length: 0.30000001192092896
-        Head Radius: 0.10000000149011612
-        Shaft Length: 1
-        Shaft Radius: 0.05000000074505806
-        Value: Arrow
-      Topic: /quadrotor_1/ground_truth/state
-      Unreliable: false
       Value: true
     - Alpha: 0.699999988079071
       Class: rviz/Map
@@ -132,15 +97,15 @@ Visualization Manager:
         base_footprint:
           Value: false
         base_link:
-          Value: false
-        base_position:
           Value: true
+        base_position:
+          Value: false
         base_stabilized:
           Value: false
         map:
           Value: true
-        nav:
-          Value: false
+        quadrotor_1/laser0_frame:
+          Value: true
       Marker Scale: 1
       Name: TF
       Show Arrows: true
@@ -153,6 +118,8 @@ Visualization Manager:
               base_link:
                 {}
           base_position:
+            {}
+          quadrotor_1/laser0_frame:
             {}
       Update Interval: 0
       Value: true
@@ -180,24 +147,24 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 28.420082092285156
+      Distance: 6.965217590332031
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
         Swap Stereo Eyes: false
         Value: false
       Focal Point:
-        X: 4.401028156280518
-        Y: -1.5308924913406372
-        Z: -3.017393112182617
+        X: 0.24620497226715088
+        Y: -0.6949717998504639
+        Z: -1.28325617313385
       Focal Shape Fixed Size: true
       Focal Shape Size: 0.05000000074505806
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.695398211479187
+      Pitch: 0.8903980255126953
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 0.6953978538513184
+      Yaw: 0.9403977394104004
     Saved: ~
 Window Geometry:
   Displays:

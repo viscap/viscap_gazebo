@@ -25,7 +25,7 @@
         respawn="false" output="screen"/>
 
     <!-- state estimator -->
-    <node ns="quadrotor_$(arg id)" name="hector_pose_estimation_$(arg id)" pkg="hector_pose_estimation" type="pose_estimation" output="screen"/>
+    <!--node ns="quadrotor_$(arg id)" name="hector_pose_estimation_$(arg id)" pkg="hector_pose_estimation" type="pose_estimation" output="screen"/-->
 
     <!-- publish base frame to tf -->
     <node ns="quadrotor_$(arg id)" name="ground_truth_to_tf_$(arg id)" pkg="message_to_tf" type="message_to_tf" output="screen">
