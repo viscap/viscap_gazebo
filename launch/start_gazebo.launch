@@ -1,0 +1,10 @@
+<launch>
+
+    <arg name="world" default="imav_indoor_2016" />
+
+    <!-- start gazebo -->
+    <include file="$(find gazebo_ros)/launch/empty_world.launch">
+        <arg name="world_name" value="$(find viscap_gazebo)/worlds/$(arg world).world"/>
+    </include>
+
+</launch>

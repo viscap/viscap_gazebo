@@ -2,7 +2,7 @@
 
     <!-- start gazebo -->
     <include file="$(find gazebo_ros)/launch/empty_world.launch">
-        <arg name="world_name" value="$(find viscap_gazebo)/worlds/imav_2016_indoor.world"/>
+        <arg name="world_name" value="$(find viscap_gazebo)/worlds/imav_indoor_2016.world"/>
     </include>
 
     <!-- spawn one quadrotor -->
