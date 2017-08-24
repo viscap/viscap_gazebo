@@ -23,12 +23,11 @@
     <node name="transform_publisher" pkg="viscap_gazebo" type="transform_publisher" />
 
     <!-- slam node -->
-    <!--node ns="quadrotor_1" name="hector_mapping" pkg="hector_mapping" type="hector_mapping" output="screen"></node-->
-    <include file="$(find hector_mapping)/launch/mapping_default.launch">
-        <arg name="base_frame" value="base_link"/>
-        <arg name="odom_frame" value="odom"/>
-        <arg name="scan_topic" value="/quadrotor_1/laser0_frame"/>
-    </include>
+    <node name="gmapping" pkg="gmapping" type="slam_gmapping">
+        <param name="base_frame" value="base_link" />
+        <param name="odom_frame" value="odom" />
+        <remap from="scan" to="/quadrotor_1/scan" />
+    </node>
 
     <!-- Run RVIZ-->
     <node name="$(anon rviz)" pkg="rviz" type="rviz" args="-d $(find viscap_gazebo)/rviz_config/slam.rviz" />
