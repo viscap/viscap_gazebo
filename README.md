@@ -29,6 +29,7 @@ git clone https://github.com/viscap/viscap_gazebo
 4. Compilar o plugin de controle do drone:
 ```
 cd ~/catkin_ws/src/viscap_gazebo/plugins
+rm -r build
 mkdir -p build
 cd build
 cmake ..
@@ -57,7 +58,7 @@ catkin_make
 ```
 sudo apt install ros-indigo-joy
 sudo apt install ros-indigo-image-view
-sudo apt install ros-indigo-hector-gazebo-plugins ros-indigo-hector-sensors-description ros-indigo-hector-gazebo ros-indigo-hector-localization ros-indigo-slam-gmapping
+sudo apt install ros-indigo-hector-sensors-description ros-indigo-hector-localization ros-indigo-slam-gmapping
 ```
 3. Fazer o download do pacote viscap_gazebo:
 ```
@@ -68,6 +69,7 @@ git clone https://github.com/viscap/viscap_gazebo
 ```
 source ~/simulation/ros_catkin_ws/devel/setup.bash
 cd ~/simulation/ros_catkin_ws/src/viscap_gazebo/plugins
+rm -r build
 mkdir -p build
 cd build
 cmake ..
