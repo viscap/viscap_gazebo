@@ -1,2 +1,2 @@
 - setup-file:
-    local-name: /home/lmi/catkin_ws/src/viscap_gazebo/plugins/build/devel/setup.sh
+    local-name: /home/faeru/simulation/ros_catkin_ws/src/viscap_gazebo/plugins/build/devel/setup.sh
