@@ -1,1 +1,1 @@
-set(ORDERED_PATHS "/opt/ros/kinetic/lib")
+set(ORDERED_PATHS "/home/faeru/simulation/ros_catkin_ws/devel/lib;/opt/ros/indigo/lib")

@@ -16,14 +16,14 @@
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://imav_2017/meshes/quadrotor/quadrotor_4.dae"/>
+          <mesh filename="package://viscap_gazebo/meshes/quadrotor/quadrotor_4.dae"/>
         </geometry>
       </visual>
 
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://imav_2017/meshes/quadrotor/quadrotor_4.stl"/>
+          <mesh filename="package://viscap_gazebo/meshes/quadrotor/quadrotor_4.stl"/>
         </geometry>
       </collision>
     </link>
