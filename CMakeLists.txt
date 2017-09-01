@@ -2,11 +2,11 @@ cmake_minimum_required(VERSION 2.8.3)
 project(viscap_gazebo)
 
 find_package(catkin REQUIRED COMPONENTS
-    roscpp imav_2017 geometry_msgs sensor_msgs nav_msgs tf
+    roscpp geometry_msgs sensor_msgs nav_msgs tf
 )
 
 catkin_package(
-    CATKIN_DEPENDS roscpp imav_2017 geometry_msgs sensor_msgs nav_msgs tf
+    CATKIN_DEPENDS roscpp geometry_msgs sensor_msgs nav_msgs tf
 )
 
 include_directories(

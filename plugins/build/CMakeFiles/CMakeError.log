@@ -1,23 +1,24 @@
 Determining if the pthread_create exist failed with the following output:
-Change Dir: /home/faeru/simulation/ros_catkin_ws/src/viscap_gazebo/plugins/build/CMakeFiles/CMakeTmp
+Change Dir: /home/lmi/catkin_ws/src/viscap_gazebo/plugins/build/CMakeFiles/CMakeTmp
 
-Run Build Command:/usr/bin/make "cmTryCompileExec3734540677/fast"
-/usr/bin/make -f CMakeFiles/cmTryCompileExec3734540677.dir/build.make CMakeFiles/cmTryCompileExec3734540677.dir/build
-make[1]: Entering directory `/home/faeru/simulation/ros_catkin_ws/src/viscap_gazebo/plugins/build/CMakeFiles/CMakeTmp'
-/usr/bin/cmake -E cmake_progress_report /home/faeru/simulation/ros_catkin_ws/src/viscap_gazebo/plugins/build/CMakeFiles/CMakeTmp/CMakeFiles 1
-Building C object CMakeFiles/cmTryCompileExec3734540677.dir/CheckSymbolExists.c.o
-/usr/bin/cc    -o CMakeFiles/cmTryCompileExec3734540677.dir/CheckSymbolExists.c.o   -c /home/faeru/simulation/ros_catkin_ws/src/viscap_gazebo/plugins/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
-Linking C executable cmTryCompileExec3734540677
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3734540677.dir/link.txt --verbose=1
-/usr/bin/cc       CMakeFiles/cmTryCompileExec3734540677.dir/CheckSymbolExists.c.o  -o cmTryCompileExec3734540677 -rdynamic 
-CMakeFiles/cmTryCompileExec3734540677.dir/CheckSymbolExists.c.o: In function `main':
+Run Build Command:"/usr/bin/make" "cmTC_2223a/fast"
+/usr/bin/make -f CMakeFiles/cmTC_2223a.dir/build.make CMakeFiles/cmTC_2223a.dir/build
+make[1]: Entering directory '/home/lmi/catkin_ws/src/viscap_gazebo/plugins/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_2223a.dir/CheckSymbolExists.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_2223a.dir/CheckSymbolExists.c.o   -c /home/lmi/catkin_ws/src/viscap_gazebo/plugins/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_2223a
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2223a.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_2223a.dir/CheckSymbolExists.c.o  -o cmTC_2223a -rdynamic 
+CMakeFiles/cmTC_2223a.dir/CheckSymbolExists.c.o: In function `main':
 CheckSymbolExists.c:(.text+0x16): undefined reference to `pthread_create'
 collect2: error: ld returned 1 exit status
-make[1]: Leaving directory `/home/faeru/simulation/ros_catkin_ws/src/viscap_gazebo/plugins/build/CMakeFiles/CMakeTmp'
-make[1]: *** [cmTryCompileExec3734540677] Error 1
-make: *** [cmTryCompileExec3734540677/fast] Error 2
+CMakeFiles/cmTC_2223a.dir/build.make:97: recipe for target 'cmTC_2223a' failed
+make[1]: *** [cmTC_2223a] Error 1
+make[1]: Leaving directory '/home/lmi/catkin_ws/src/viscap_gazebo/plugins/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_2223a/fast' failed
+make: *** [cmTC_2223a/fast] Error 2
 
-File /home/faeru/simulation/ros_catkin_ws/src/viscap_gazebo/plugins/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+File /home/lmi/catkin_ws/src/viscap_gazebo/plugins/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
 /* */
 #include <pthread.h>
 
@@ -33,21 +34,22 @@ int main(int argc, char** argv)
 }
 
 Determining if the function pthread_create exists in the pthreads failed with the following output:
-Change Dir: /home/faeru/simulation/ros_catkin_ws/src/viscap_gazebo/plugins/build/CMakeFiles/CMakeTmp
+Change Dir: /home/lmi/catkin_ws/src/viscap_gazebo/plugins/build/CMakeFiles/CMakeTmp
 
-Run Build Command:/usr/bin/make "cmTryCompileExec2906322593/fast"
-/usr/bin/make -f CMakeFiles/cmTryCompileExec2906322593.dir/build.make CMakeFiles/cmTryCompileExec2906322593.dir/build
-make[1]: Entering directory `/home/faeru/simulation/ros_catkin_ws/src/viscap_gazebo/plugins/build/CMakeFiles/CMakeTmp'
-/usr/bin/cmake -E cmake_progress_report /home/faeru/simulation/ros_catkin_ws/src/viscap_gazebo/plugins/build/CMakeFiles/CMakeTmp/CMakeFiles 1
-Building C object CMakeFiles/cmTryCompileExec2906322593.dir/CheckFunctionExists.c.o
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTryCompileExec2906322593.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
-Linking C executable cmTryCompileExec2906322593
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2906322593.dir/link.txt --verbose=1
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTryCompileExec2906322593.dir/CheckFunctionExists.c.o  -o cmTryCompileExec2906322593 -rdynamic -lpthreads 
+Run Build Command:"/usr/bin/make" "cmTC_ba0f6/fast"
+/usr/bin/make -f CMakeFiles/cmTC_ba0f6.dir/build.make CMakeFiles/cmTC_ba0f6.dir/build
+make[1]: Entering directory '/home/lmi/catkin_ws/src/viscap_gazebo/plugins/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_ba0f6.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_ba0f6.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_ba0f6
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ba0f6.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_ba0f6.dir/CheckFunctionExists.c.o  -o cmTC_ba0f6 -rdynamic -lpthreads 
 /usr/bin/ld: cannot find -lpthreads
 collect2: error: ld returned 1 exit status
-make[1]: Leaving directory `/home/faeru/simulation/ros_catkin_ws/src/viscap_gazebo/plugins/build/CMakeFiles/CMakeTmp'
-make[1]: *** [cmTryCompileExec2906322593] Error 1
-make: *** [cmTryCompileExec2906322593/fast] Error 2
+CMakeFiles/cmTC_ba0f6.dir/build.make:97: recipe for target 'cmTC_ba0f6' failed
+make[1]: *** [cmTC_ba0f6] Error 1
+make[1]: Leaving directory '/home/lmi/catkin_ws/src/viscap_gazebo/plugins/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_ba0f6/fast' failed
+make: *** [cmTC_ba0f6/fast] Error 2
 
 

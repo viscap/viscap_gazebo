@@ -1,1 +1,1 @@
-/usr/bin/c++  -fPIC -std=c++11   -shared -Wl,-soname,libquadrotor_simple_controller.so -o libquadrotor_simple_controller.so CMakeFiles/quadrotor_simple_controller.dir/src/quadrotor_simple_controller.cpp.o  -L/usr/lib/x86_64-linux-gnu/gazebo-7/plugins 
+/usr/bin/c++  -fPIC -std=c++11  -shared -Wl,-soname,libquadrotor_simple_controller.so -o libquadrotor_simple_controller.so CMakeFiles/quadrotor_simple_controller.dir/src/quadrotor_simple_controller.cpp.o  -L/usr/lib/x86_64-linux-gnu/gazebo-7/plugins 

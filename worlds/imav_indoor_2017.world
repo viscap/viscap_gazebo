@@ -190,7 +190,7 @@
           <pose>0 0 0 0 0 0</pose>
           <geometry>
             <mesh>
-              <uri>file:///home/faeru/simulation/ros_catkin_ws/src/viscap_gazebo/worlds/xacro/wall.dae</uri>
+              <uri>file:///home/lmi/catkin_ws/src/viscap_gazebo/worlds/xacro/wall.dae</uri>
               <scale>0.1 0.1 0.1</scale>
             </mesh>
           </geometry>
@@ -204,7 +204,7 @@
           <pose>0 0 0 0 0 0</pose>
           <geometry>
             <mesh>
-              <uri>file:///home/faeru/simulation/ros_catkin_ws/src/viscap_gazebo/worlds/xacro/wall.dae</uri>
+              <uri>file:///home/lmi/catkin_ws/src/viscap_gazebo/worlds/xacro/wall.dae</uri>
               <scale>0.1 0.1 0.1</scale>
             </mesh>
           </geometry>
@@ -238,7 +238,7 @@
           </geometry>
           <material>
             <script>
-              <uri>file:///home/faeru/simulation/ros_catkin_ws/src/viscap_gazebo/worlds/xacro/custom.material</uri>
+              <uri>file:///home/lmi/catkin_ws/src/viscap_gazebo/worlds/xacro/custom.material</uri>
               <name>MathWorks_branding</name>
             </script>
           </material>
@@ -294,7 +294,7 @@
             <pose>0 0 0 1.5708 0 0</pose>
             <geometry>
               <mesh>
-                <uri>file:///home/faeru/simulation/ros_catkin_ws/src/viscap_gazebo/worlds/xacro/tree1.dae</uri>
+                <uri>file:///home/lmi/catkin_ws/src/viscap_gazebo/worlds/xacro/tree1.dae</uri>
                 <scale>0.01 0.01 0.01</scale>
               </mesh>
             </geometry>
@@ -303,7 +303,7 @@
             <pose>0 0 0 1.5708 0 0</pose>
             <geometry>
               <mesh>
-                <uri>file:///home/faeru/simulation/ros_catkin_ws/src/viscap_gazebo/worlds/xacro/tree1.dae</uri>
+                <uri>file:///home/lmi/catkin_ws/src/viscap_gazebo/worlds/xacro/tree1.dae</uri>
                 <scale>0.01 0.01 0.01</scale>
               </mesh>
             </geometry>
@@ -327,7 +327,7 @@
             <pose>0 0 0 1.5708 0 0</pose>
             <geometry>
               <mesh>
-                <uri>file:///home/faeru/simulation/ros_catkin_ws/src/viscap_gazebo/worlds/xacro/tree1.dae</uri>
+                <uri>file:///home/lmi/catkin_ws/src/viscap_gazebo/worlds/xacro/tree1.dae</uri>
                 <scale>0.01 0.004 0.01</scale>
               </mesh>
             </geometry>
@@ -336,7 +336,7 @@
             <pose>0 0 0 1.5708 0 0</pose>
             <geometry>
               <mesh>
-                <uri>file:///home/faeru/simulation/ros_catkin_ws/src/viscap_gazebo/worlds/xacro/tree1.dae</uri>
+                <uri>file:///home/lmi/catkin_ws/src/viscap_gazebo/worlds/xacro/tree1.dae</uri>
                 <scale>0.01 0.004 0.01</scale>
               </mesh>
             </geometry>
@@ -379,7 +379,7 @@
           </geometry>
           <material>
             <script>
-              <uri>file:///home/faeru/simulation/ros_catkin_ws/src/viscap_gazebo/worlds/xacro/custom.material</uri>
+              <uri>file:///home/lmi/catkin_ws/src/viscap_gazebo/worlds/xacro/custom.material</uri>
               <name>Helipad</name>
             </script>
           </material>
@@ -472,7 +472,7 @@
           </geometry>
           <material>
             <script>
-              <uri>file:///home/faeru/simulation/ros_catkin_ws/src/viscap_gazebo/worlds/xacro/custom.material</uri>
+              <uri>file:///home/lmi/catkin_ws/src/viscap_gazebo/worlds/xacro/custom.material</uri>
               <name>Helipad</name>
             </script>
           </material>
@@ -506,7 +506,7 @@
           </geometry>
           <material>
             <script>
-              <uri>file:///home/faeru/simulation/ros_catkin_ws/src/viscap_gazebo/worlds/xacro/custom.material</uri>
+              <uri>file:///home/lmi/catkin_ws/src/viscap_gazebo/worlds/xacro/custom.material</uri>
               <name>QR1</name>
             </script>
           </material>

@@ -7,6 +7,6 @@
 # new environment variables
 
 # modified environment variables
-export CMAKE_PREFIX_PATH="/home/faeru/simulation/ros_catkin_ws/src/viscap_gazebo/plugins/build/devel:$CMAKE_PREFIX_PATH"
-export ROSLISP_PACKAGE_DIRECTORIES="/home/faeru/simulation/ros_catkin_ws/src/viscap_gazebo/plugins/build/devel/share/common-lisp:$ROSLISP_PACKAGE_DIRECTORIES"
-export ROS_PACKAGE_PATH="/home/faeru/simulation/ros_catkin_ws/src/viscap_gazebo/plugins:$ROS_PACKAGE_PATH"
+export CMAKE_PREFIX_PATH="/home/lmi/catkin_ws/src/viscap_gazebo/plugins/build/devel:$CMAKE_PREFIX_PATH"
+export ROSLISP_PACKAGE_DIRECTORIES="/home/lmi/catkin_ws/src/viscap_gazebo/plugins/build/devel/share/common-lisp:$ROSLISP_PACKAGE_DIRECTORIES"
+export ROS_PACKAGE_PATH="/home/lmi/catkin_ws/src/viscap_gazebo/plugins:$ROS_PACKAGE_PATH"
