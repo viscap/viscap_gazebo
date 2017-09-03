@@ -11,7 +11,7 @@
     <!-- Included URDF Files -->
     
     <!-- Base airframe -->
-    <xacro:include filename="$(find viscap_gazebo)/urdf/quadrotor_base.urdf.xacro" />    
+    <xacro:include filename="$(find viscap_gazebo)/urdf/quadrotor_base.urdf.xacro" />
     <quadrotor_base_macro/>
     
     <!-- IMU, Baro, Magnetic, GPS, Groundtruth sensors -->
