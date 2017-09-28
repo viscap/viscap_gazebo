@@ -107,3 +107,11 @@ Iniciar um drone dentro da simulação:
 roslaunch viscap_gazebo spawn_quadrotor.launch id:=<id do drone>
 ```
 Para iniciar vários drones, executar esse comando várias vezes, mas cada vez com um id diferente.
+
+
+## SLAM Node
+Com essa aplicação é possível realizar o mapeamento do prédio do IMAV 2016 usando o slam_gmapping. Para iniciar, conectar o joystick USB ao computador e executar o seguinte comando:
+```
+roslaunch viscap_gazebo imav_2016_indoor_slam.launch
+```
+Pilotar o drone pelo mapa, entrando em todos os cômodos da casinha. A visualização do RViz vai mostrar o mapa que está sendo desenhado.
