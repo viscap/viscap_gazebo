@@ -110,6 +110,11 @@ Para iniciar vários drones, executar esse comando várias vezes, mas cada vez c
 
 
 ## SLAM Node
+
+Tela Inicial                      |  Mapa Completo
+:--------------------------------:|:-------------------------:
+![slam01](http://gdurl.com/ICMK)  |  ![slam03](http://gdurl.com/ittg)
+
 Com essa aplicação é possível realizar o mapeamento do prédio do IMAV 2016 usando o slam_gmapping. Para iniciar, conectar o joystick USB ao computador e executar o seguinte comando:
 ```
 roslaunch viscap_gazebo imav_2016_indoor_slam.launch
