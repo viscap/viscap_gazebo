@@ -1,0 +1,15 @@
+<launch>
+
+    <!-- start gazebo -->
+    <include file="$(find gazebo_ros)/launch/empty_world.launch" />
+
+    <!-- spawn one quadrotor -->
+    <include file="$(find viscap_gazebo)/launch/spawn_quadrotor.launch">
+        <arg name="id" value="1"/>
+    </include>
+
+    <!-- play a rosbag to control the quadrotor -->
+    <node pkg="rosbag" type="play" name="play_joystick"
+        args="$(find viscap_gazebo)/bagfiles/joystick.bag" />
+
+</launch>

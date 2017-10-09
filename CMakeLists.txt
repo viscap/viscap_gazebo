@@ -20,3 +20,7 @@ target_link_libraries(joystick_control ${catkin_LIBRARIES})
 add_executable(transform_publisher src/transform_publisher.cpp ${CPP_FILES})
 add_dependencies(transform_publisher ${catkin_EXPORTED_TARGETS})
 target_link_libraries(transform_publisher ${catkin_LIBRARIES})
+
+add_executable(go_to_position src/go_to_position.cpp ${CPP_FILES})
+add_dependencies(go_to_position ${catkin_EXPORTED_TARGETS})
+target_link_libraries(go_to_position ${catkin_LIBRARIES})

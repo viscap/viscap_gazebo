@@ -1,0 +1,17 @@
+<launch>
+
+    <!-- start gazebo -->
+    <include file="$(find gazebo_ros)/launch/empty_world.launch" />
+
+    <!-- spawn one quadrotor -->
+    <include file="$(find viscap_gazebo)/launch/spawn_quadrotor.launch">
+        <arg name="id" value="1"/>
+    </include>
+
+    <!-- control the quadrotor with a joystick -->
+    <node name="joy" pkg="joy" type="joy_node">
+        <param name="dev" value="/dev/input/js0" />
+    </node>
+    <node name="joystick_control" pkg="viscap_gazebo" type="joystick_control" />
+
+</launch>

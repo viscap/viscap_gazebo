@@ -1,0 +1,15 @@
+<launch>
+
+    <arg name="world" default="empty" />
+
+    <!-- start gazebo -->
+    <include file="$(find gazebo_ros)/launch/empty_world.launch">
+        <arg name="world_name" value="$(find viscap_gazebo)/worlds/$(arg world).world"/>
+    </include>
+
+    <!-- spawn one quadrotor -->
+    <include file="$(find viscap_gazebo)/launch/spawn_quadrotor.launch">
+        <arg name="id" value="1"/>
+    </include>
+
+</launch>
